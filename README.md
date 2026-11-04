@@ -36,6 +36,17 @@ Text cleaning, tokenization, stop-word handling (negations kept), lemmatization,
 3. Slow service is common but does not make reviews noticeably angrier on its own (odds ratio about 1.06).
 4. Rude-staff complaints rose from 8.9% of negative reviews in 2008 to 13.8% in 2012. Slow service stayed flat (about 22-23%).
 
+## What the model learned
+The words that push a review towards "negative" were: worst, bland, mediocre, not worth, rude, terrible, disappointing, overpriced, awful, not good, disgusting. Words pushing towards "positive" were: great, delicious, amazing, love, awesome, excellent, best, friendly. "Not disappointed" ranked as positive, which shows why negation words were kept.
+
+## How complaints changed over time (% of each year's negative reviews)
+| Year | Slow service | Rude staff | Food quality | Cleanliness |
+|---|---|---|---|---|
+| 2008 | 21.4 | 8.9 | 24.1 | 6.5 |
+| 2010 | 22.7 | 11.3 | 24.9 | 4.8 |
+| 2012 | 23.5 | 13.8 | 22.2 | 5.6 |
+
+Rude-staff complaints rose steadily; slow service stayed roughly flat. 2013 is left out because it has only 277 reviews.
 ## Recommendation
 These are market-wide patterns, not advice for one specific business. An individual operator should run the same analysis on their own reviews before acting.
 - **Fix first, by volume:** waiting times and food quality, because they affect the most customers (staffing at peak times, quoted wait times, kitchen quality checks).
