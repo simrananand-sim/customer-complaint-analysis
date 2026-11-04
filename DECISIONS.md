@@ -1,6 +1,6 @@
 # Decisions
 
-1. **Used the review file across all businesses.** The dataset covers about 11,500 Phoenix-area businesses with no category column, so I framed the question as market-wide complaint patterns, not advice for one business.
+1. **Used all businesses, then split by type.** The dataset covers about 11,500 Phoenix-area businesses, so I framed the question as market-wide complaint patterns. I then joined the business file to compare food businesses with others, because complaints differ by type.
 2. **Removed duplicates before modelling.** 242 duplicate review texts were dropped so the same review cannot sit in both the training and test sets.
 3. **Kept negation words** ("not", "no", "never"). Standard stop-word lists remove them, which turns "not good" into "good".
 4. **Dropped 3-star reviews from the classifier.** They are mixed, so the model learns a cleaner negative vs positive split. The theme analysis uses 1-2 star reviews only.
@@ -12,3 +12,5 @@
 10. **Used 1-star share and odds ratios, not only volume.** The most common complaint is not always the one that hurts most.
 11. **No causal claims.** The data shows which complaints go with angry reviews, not what causes them. The recommended pilot test is a design only; I did not run it.
 12. **Raw data kept out of the repo.** The dataset is used under the Yelp academic dataset terms, so the README links to Kaggle instead.
+13. **Defined "food business" as category "Restaurants" or "Food".** This is a simple, transparent rule. Bars and businesses with no category fall into "other", which is stated as a limitation.
+14. **Did not use the user and check-in files.** They answer different questions (reviewer behaviour, busy times), and the check-in counts are per business, not tied to review dates, so any link would be weak. They are listed as further analysis.
